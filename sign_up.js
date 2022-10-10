@@ -70,6 +70,7 @@ function signup_google() {
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
+            console.log("error code: "+error.code);
             var errorMessage = error.message;
             // The email of the user's account used.
             var email = error.email;
