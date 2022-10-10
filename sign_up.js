@@ -70,14 +70,21 @@ function signup_google() {
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
-            console.log("error code: "+error.code);
+            console.log("error code: " + error.code);
             var errorMessage = error.message;
             // The email of the user's account used.
             var email = error.email;
             // The firebase.auth.AuthCredential type that was used.
+            switch (error.code) {
+                case "auth/popup-closed-by-user":
+                    errorMessage="Google account login was not completed";
+                    break;
+                default:
+            }
+
             var credential = error.credential;
             error_output(errorMessage)
-        }); 
+        });
 }
 
 signupButtonEmail.addEventListener('click', signup_email);
