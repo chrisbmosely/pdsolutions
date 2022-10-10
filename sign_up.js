@@ -6,6 +6,8 @@ let signupPassword = document.getElementById('signupPassword');
 let singupError = document.getElementsByClassName('error-message')[0];
 let signupSuccess = document.getElementsByClassName('success-message')[0];
 
+console.log("IT'S WORKING");
+
 function clear_error() {
     singupError.style.display = "none";
 }
