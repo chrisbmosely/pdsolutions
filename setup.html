@@ -1,0 +1,29 @@
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
+
+<script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAl9nP9xsBbR6xQVrnYjwDFnAnTeC59IAs",
+      authDomain: "pdsolutions-edb87.firebaseapp.com",
+      projectId: "pdsolutions-edb87",
+      storageBucket: "pdsolutions-edb87.appspot.com",
+      messagingSenderId: "640209116187",
+      appId: "1:640209116187:web:d844d81b80acf87bb92cbe",
+      measurementId: "G-V0DJGHWE6C"
+    };
+  
+    // Initialize Firebase
+    const app = firebase.initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().useDeviceLanguage();
+    
+    //Request more information from Google Sign-in
+    // provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+    // provider.addScope('https://www.googleapis.com/auth/user.addresses.read');
+    // provider.addScope('https://www.googleapis.com/auth/user.phonenumbers.read	');
+    provider.addScope('https://www.googleapis.com/auth/userinfo.email');
+    // provider.addScope('https://www.googleapis.com/auth/userinfo.profile	');
+</script>
