@@ -77,7 +77,7 @@ function signup_google() {
             // The firebase.auth.AuthCredential type that was used.
             var credential = error.credential;
             error_output(errorMessage)
-        });
+        }); 
 }
 
 signupButtonEmail.addEventListener('click', signup_email);
